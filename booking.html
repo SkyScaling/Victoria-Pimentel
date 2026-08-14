@@ -83,7 +83,7 @@
   .adv-proof{color:var(--text-2);font-size:13.5px;margin-top:12px;line-height:1.5}
   .adv-bio{color:var(--text-2);font-size:15px;line-height:1.65;margin:15px auto 0;max-width:600px}
   .adv-card.has-photo .adv-bio{margin-left:0;margin-right:0}
-  .adv-link{display:none;align-items:center;gap:6px;margin-top:16px;color:var(--accent-d);font-family:'Poppins';font-weight:700;font-size:14.5px;text-decoration:none}
+  .adv-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--accent-d);font-family:'Poppins';font-weight:700;font-size:14.5px;text-decoration:none}
   .adv-link:hover{text-decoration:underline}
   .adv-link svg{width:15px;height:15px}
 
@@ -304,7 +304,7 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
         <div class="adv-title" id="adv-title"></div>
         <div class="adv-proof" id="adv-proof"></div>
         <p class="adv-bio" id="adv-bio"></p>
-        <a class="adv-link" id="adv-link" href="#" target="_blank" rel="noopener">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="adv-link" id="adv-link" href="about.html" target="_blank" rel="noopener">Read more about Victoria <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
@@ -407,10 +407,11 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
       ph.onerror=function(){ ph.style.display='none'; document.getElementById('adv-card').classList.remove('has-photo'); };
       ph.src=C.ADVISOR_PHOTO; ph.style.display=''; document.getElementById('adv-card').classList.add('has-photo');
     }
-    if(C.ADVISOR_ABOUT_URL){
-      var lk=document.getElementById('adv-link'); lk.href=C.ADVISOR_ABOUT_URL; lk.style.display='inline-flex';
-      var fn=((C.ADVISOR_NAME||'').trim().split(/\s+/)[0]||'');
-      if(fn && ['a','your','the'].indexOf(fn.toLowerCase())===-1){ lk.childNodes[0].nodeValue='Read more about '+fn+' '; }
+    /* The link is rendered in the HTML with a real href, so it works with no JS at all.
+       This only hides it if a client has no About page. */
+    if(!C.ADVISOR_ABOUT_URL){
+      var lk=document.getElementById('adv-link');
+      if(lk) lk.style.display='none';
     }
   })();
 
