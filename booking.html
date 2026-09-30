@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Call | FinanceBridges</title>
-<meta name="description" content="Pick a time with Victoria Pimentel and see exactly what it takes to protect your income as a self-employed Ontarian.">
+<meta name="description" content="Pick a time with Victoria Pimentel. A free 15-minute call for Ontario business owners about the money in your corporation, your retirement and your income.">
 <meta name="theme-color" content="#F4F8F5">
 <link rel="icon" type="image/svg+xml" href="https://storage.googleapis.com/msgsndr/YD07511ANI6LBQQguuTM/media/6764d80563c0fec34cd9d5b3.svg">
 <link rel="apple-touch-icon" href="https://storage.googleapis.com/msgsndr/YD07511ANI6LBQQguuTM/media/6764d80563c0fec34cd9d5b3.svg">
@@ -16,15 +16,15 @@
     BOOKING_URL: "https://link.skyscaling.com/widget/booking/gvFq5arhTUCXxxAIjrgj",
     THANKYOU_URL: "thank-you.html",   /* page people land on AFTER they book (handled automatically) */
 
-    /* Main video. Paste a YouTube / Vimeo link OR a direct .mp4 URL. Leave "" for a placeholder. */
-    VSL_EMBED: "https://assets.cdn.filesafe.space/cIEiGPHzRWPAUucJJ6QA/media/6a57b066c06d2134c6c30973.mp4",
+    /* Main video. Paste a YouTube / Vimeo link OR a direct .mp4 URL. Leave "" to hide the video. */
+    VSL_EMBED: "",
     VSL_POSTER_TIME: 2.5,   /* which second of the mp4 to freeze as the thumbnail; bump this if the frame looks off */
 
     /* ---- THE ADVISOR (per client) ---- */
     ADVISOR_NAME: "Victoria Pimentel",
     ADVISOR_TITLE: "Principal, Client Advisory · Legacy Capital Life",
-    ADVISOR_PROOF: "LLQP licensed  ·  8 years in HR before financial advisory  ·  Serving Ontario",   /* short credibility line, separate items with "  ·  ". Leave "" to hide. */
-    ADVISOR_BIO: "Hi, I'm Victoria. I spent eight years in human resources specializing in return-to-work, accommodations and benefits, so I've sat with people during some of the hardest weeks of their working lives and helped them understand what was and wasn't covered. I want everyone I meet to understand their current situation, their risks, and how to secure their futures. I know what it looks like when something happens and you have no supports in place. I joined Legacy Capital Life to bring that experience to the other side of the table, helping clients plan before things go wrong. On our call I'll ask about your work and what you already have in place, then show you plainly where you stand. My goal is that you leave feeling confident and understood, not sold to.",
+    ADVISOR_PROOF: "LLQP licensed  ·  8 years in HR before advising  ·  Serving Ontario business owners",   /* short credibility line, separate items with "  ·  ". Leave "" to hide. */
+    ADVISOR_BIO: "Hi, I'm Victoria. I spent eight years in HR working on benefits and helping people get back to work after an illness or injury, so I know what happens when something goes wrong and nothing is in place. Now I help Ontario business owners use their corporation to grow their money, plan their retirement and protect what they've built. I work with your accountant, not around them. On our call I'll ask about your business and show you plainly where you stand. You'll leave understood, not sold to.",
     ADVISOR_ABOUT_URL: "about.html",   /* link to this advisor's About Me page. Leave "" to hide the "Read more" link. */
 
     /* Full profile is ON by default (photo + name + bio). An advisor can set this to false to lead with credentials only. */
@@ -153,6 +153,15 @@
   .reassure span{display:inline-flex;align-items:center;gap:8px}
   .reassure svg{width:17px;height:17px;color:var(--accent);flex:none}
 
+  /* THREE THINGS */
+  h1.hero{text-wrap:balance}
+  .look-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .look-card{background:#F4F1E6;border:1px solid rgba(13,42,28,0.16);border-radius:var(--radius);padding:26px 22px}
+  .look-card .lnum{width:30px;height:30px;border-radius:9px;background:var(--accent-tint);color:var(--accent-d);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:14px;margin-bottom:14px}
+  .look-card h3{font-family:'Poppins';font-weight:800;font-size:18.5px;line-height:1.2;letter-spacing:-0.01em;color:var(--text);margin-bottom:10px}
+  .look-card p{color:var(--text-2);font-size:14.5px;line-height:1.6}
+  .calc-card .calc-dis:first-of-type{margin-top:28px}
+
   .book-note{display:flex;gap:8px;align-items:flex-start;justify-content:center;text-align:center;color:var(--text-3);font-size:13px;line-height:1.5;margin-top:18px}
   .book-note svg{width:15px;height:15px;color:var(--accent);flex:none;margin-top:2px}
 
@@ -175,6 +184,8 @@
     .vwrap{margin-top:24px}
     .calc-card{margin-top:26px;padding:24px 18px}
     .calc-grid{grid-template-columns:1fr;gap:10px;margin-top:26px}
+    .look-grid{grid-template-columns:1fr;gap:10px}
+    .look-card{padding:22px 20px}
     .cvs{margin:2px auto}
     .book{margin-top:34px}
     section{padding:38px 0 0;margin-top:40px}
@@ -221,79 +232,25 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
 
 <div class="wrap">
 
-  <div class="eyebrow">&lt; Book your call &gt;</div>
-  <h1 class="hero">One Illness Shouldn't Cost You <span class="a">Everything.</span></h1>
-  <p class="lead">Whether you're a business owner or self-employed, if a serious illness or injury stopped you from working, your income would stop the same day, while the mortgage, the payroll, and the bills kept coming. This call fixes that. In 15 minutes, Victoria will show you <b>exactly</b> what it would cost to protect your income. Watch the short video below, then grab a time.</p>
+  <div class="eyebrow">&lt; For Ontario business owners &gt;</div>
+  <h1 class="hero">Keep More Of What <span class="a">Your Business Earns.</span></h1>
+  <p class="lead">You've worked hard to build up money in your corporation. Take it out and you pay personal tax. Leave it invested and the growth gets taxed hard. In 15 minutes on the phone, I'll show you plainly if there's a better way to grow it, retire on it, and protect your income if you get sick or hurt. Then you decide.</p>
 
   <div class="vwrap" id="vsl-mount"></div>
 
   <section>
-    <div class="sec-title">What Six Months <span style="white-space:nowrap">Off Work</span> <span class="a">Actually Costs You</span></div>
-    <div class="sec-sub">Drag the slider to your income. This is the math most business owners never run.</div>
+    <div class="sec-title">Three Things I Look At <span class="a">With Business Owners</span></div>
+    <div class="sec-sub">You don't need all three. On the call, we focus on the ones that matter to you.</div>
     <div class="calc-card">
-      <div class="calc-top">
-        <div class="calc-lab">Your personal income</div>
-        <div class="calc-val" id="inc-val">$100,000</div>
-        <input type="range" id="inc-range" min="40000" max="250000" step="5000" value="100000" aria-label="Your personal income">
-        <div class="calc-scale"><span>$40k</span><span>$250k</span></div>
-        <div class="calc-hint">
-          <svg viewBox="0 0 24 24"><path d="M18 8 22 12 18 16"/><path d="M6 8 2 12 6 16"/><path d="M2 12h20"/></svg>
-          Drag to your income
-        </div>
+      <div class="look-grid">
+        <div class="look-card"><div class="lnum">1</div><h3>The money sitting in your company</h3><p>Instead of leaving it all in regular investments, part of it can go into an insurance policy owned by your corporation. It grows without a yearly tax bill, you can borrow against it, and later most of it can pass to your family tax-free.</p></div>
+        <div class="look-card"><div class="lnum">2</div><h3>Your retirement</h3><p>RRSPs have a yearly limit, and if you earn well, you hit it fast. The same policy can help pay for your retirement. Instead of cashing it out and paying tax, you can borrow against it from a bank while it keeps growing.</p></div>
+        <div class="look-card"><div class="lnum">3</div><h3>Your income if you get sick or hurt</h3><p>Some plans stop paying if you can do any job at all, even one that pays far less. A policy built around your own job pays you if you can't do your work. With the right option, if you stay healthy, part of what you paid can come back to you.</p></div>
       </div>
-      <div class="calc-grid">
-        <div class="cbox cbox-out">
-          <div class="cbox-h"><i>&#10005;</i>Without coverage</div>
-          <div class="cbig" id="c-lost">$50,000</div>
-          <div class="cnote">gone in 6 months. Out of your savings, or onto a line of credit you'll still be paying back long after you're better. And that's just your income. The rent and the payroll don't stop because you did.</div>
-          <div class="clist">
-            <div class="crow"><span>3 months off work</span><b id="c-3">-$25k</b></div>
-            <div class="crow"><span>6 months off work</span><b id="c-6">-$50k</b></div>
-            <div class="crow"><span>12 months off work</span><b id="c-12">-$100k</b></div>
-          </div>
-        </div>
-        <div class="cvs">VS</div>
-        <div class="cbox cbox-in">
-          <div class="cbox-h"><i>&#10003;</i>With coverage</div>
-          <div class="cbig" id="c-pay">$8,333<span>/mo</span></div>
-          <div class="cnote">is what you normally bring in. Income protection is built to replace as much of that as you qualify for, paid straight to you while you can't work. Your advisor puts the real number on it in 15 minutes.</div>
-          <div class="clist">
-            <div class="crow"><span>Paid to you, not to a creditor</span><b>&#10003;</b></div>
-            <div class="crow"><span>Yours to spend on anything</span><b>&#10003;</b></div>
-            <div class="crow"><span>Nothing to claim from the government</span><b>&#10003;</b></div>
-          </div>
-        </div>
-      </div>
-      <p class="calc-dis"><b>And EI won't save you.</b> It's capped, it runs out, and you can only claim it if you signed up with Service Canada a full year before you got sick. Almost no business owner does. For most, that red number is the whole number.</p>
-      <p class="calc-dis">Illustrative only, based on the income you selected. What you'd qualify for, and what it would cost, depends on your health and your situation. That's exactly what the 15-minute call is for.</p>
+      <p class="calc-dis"><b>Have employees?</b> I can also look at your group benefits and see if your business is paying more than it should.</p>
+      <p class="calc-dis">General information only. What fits depends on your business, your health and your accountant's advice. That's what the 15-minute call is for.</p>
     </div>
   </section>
-  <script>
-  (function(){
-    var r=document.getElementById('inc-range'); if(!r) return;
-
-    function money(n){ return '$'+Math.round(n).toLocaleString('en-CA'); }
-    function kfmt(n){ return '$'+(Math.round(n/100)/10).toString().replace(/\.0$/,'')+'k'; }
-    function set(id,v){ var el=document.getElementById(id); if(el) el.textContent=v; }
-
-    function paint(){
-      var v=+r.value;
-      var pct=((v-(+r.min))/((+r.max)-(+r.min)))*100;
-      r.style.background='linear-gradient(90deg,#fff 0%,#fff '+pct+'%,rgba(255,255,255,0.28) '+pct+'%,rgba(255,255,255,0.28) 100%)';
-      set('inc-val',money(v));
-
-      /* Lost income: plain arithmetic, so it stays exact. */
-      set('c-lost',money(v*0.5));
-      set('c-3','-'+kfmt(v*0.25)); set('c-6','-'+kfmt(v*0.5)); set('c-12','-'+kfmt(v));
-
-      /* Their actual monthly pay. No benefit is claimed or implied here: what
-         they'd qualify for depends on the policy, so the advisor sizes it. */
-      var pay=document.getElementById('c-pay');
-      if(pay) pay.innerHTML=money(v/12)+'<span>/mo</span>';
-    }
-    r.addEventListener('input',paint); paint();
-  })();
-  </script>
 
   <div class="advisor">
     <div class="eyebrow adv-eyebrow">&lt; Who you'll be talking to &gt;</div>
@@ -310,8 +267,8 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
   </div>
 
   <div class="book">
-    <h2>Grab 15 Minutes. <span class="a">Free, No Obligation.</span></h2>
-    <p class="bsub">Pick a time that works for you. It's a quick, no-pressure call to see what protecting your income actually looks like for your situation.</p>
+    <h2>Pick Your Time. <span class="a">Get A Straight Answer.</span></h2>
+    <p class="bsub">Fifteen minutes on the phone. You'll hang up knowing where your business stands and if there's a better way to handle it. No pressure either way.</p>
     <div id="booking-mount">
       <div id="booking-fallback">Add your <b>BOOKING_URL</b> in the config to load the calendar here. &nbsp;<a href="#" id="fallback-link" target="_blank" rel="noopener">Open calendar</a></div>
     </div>
@@ -320,11 +277,11 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
 
   <section>
     <div class="sec-title">What Happens <span class="a">On The Call</span></div>
-    <div class="sec-sub">No sales pressure. Just a clear look at where you stand and what your options are.</div>
+    <div class="sec-sub">Fifteen minutes, three steps, and then it's your call.</div>
     <div class="steps">
-      <div class="step"><div class="snum">1</div><h3>We look at your real numbers</h3><p>You'll walk through exactly how much income you'd lose if you couldn't work, and what it would take to cover it, based on your actual situation.</p></div>
-      <div class="step"><div class="snum">2</div><h3>You see your options, plainly</h3><p>An independent Canadian advisor shops the market and shows you real options and real prices, in plain English.</p></div>
-      <div class="step"><div class="snum">3</div><h3>You decide, on your timeline</h3><p>There's zero obligation. If it makes sense, great. If not, you'll still walk away knowing exactly where you stand.</p></div>
+      <div class="step"><div class="snum">1</div><h3>We look at your business</h3><p>Where your money sits today, how you pay yourself, and what happens if you can't work. Your business, not a generic example.</p></div>
+      <div class="step"><div class="snum">2</div><h3>You see your options</h3><p>What could work for you and roughly what it looks like, in plain English. No jargon.</p></div>
+      <div class="step"><div class="snum">3</div><h3>You decide</h3><p>If it makes sense, we plan the next steps together, with your accountant in the loop. If not, that's the end of it. Nothing to sign either way.</p></div>
     </div>
     <div class="reassure">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>About 15 minutes</span>
@@ -335,19 +292,20 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
 
   <section>
     <div class="sec-title">Questions, <span class="a">Answered</span></div>
-    <div class="sec-sub">Everything people usually want to know before they book.</div>
+    <div class="sec-sub">The things business owners ask me most before they book.</div>
     <div class="faq">
       <div class="fq"><h4><span class="qm">Q.</span>Is this really free?</h4><p>Yes. The call costs you nothing and there's no obligation. Booking a time doesn't sign you up for anything.</p></div>
-      <div class="fq"><h4><span class="qm">Q.</span>Will I be pressured to buy something?</h4><p>No. Your advisor's job is to show you your options and answer your questions in plain language. If it's a fit, great. If not, no hard feelings.</p></div>
-      <div class="fq"><h4><span class="qm">Q.</span>How long does the call take?</h4><p>About 15 minutes, on the phone. Quick and to the point, at a time you pick.</p></div>
-      <div class="fq"><h4><span class="qm">Q.</span>Do I need to prepare anything?</h4><p>Nothing at all. Just answer the phone. Your advisor already has what you shared and will take it from there.</p></div>
-      <div class="fq"><h4><span class="qm">Q.</span>What if I'm not sure I can afford it?</h4><p>That's exactly what the call is for. Coverage can start smaller than most people think, and you'll see real numbers before you decide anything.</p></div>
+      <div class="fq"><h4><span class="qm">Q.</span>Do I need a lot of money in my corporation?</h4><p>There's no set amount. Some of this works best once your business has money left over each year. On the call I'll tell you honestly if it fits you now, later, or not at all.</p></div>
+      <div class="fq"><h4><span class="qm">Q.</span>Will this replace my accountant?</h4><p>No. Your accountant handles your taxes. I handle the insurance side. I work with them so everything fits together.</p></div>
+      <div class="fq"><h4><span class="qm">Q.</span>Why not wait until later?</h4><p>Most of this uses insurance, and you can only get it while you're healthy. The sooner you start, the more time your money has to grow.</p></div>
+      <div class="fq"><h4><span class="qm">Q.</span>Will I be pressured to buy something?</h4><p>No. My job is to show you your options and answer your questions in plain language. If it's a fit, great. If not, no hard feelings.</p></div>
+      <div class="fq"><h4><span class="qm">Q.</span>How long is it, and do I need to prepare?</h4><p>About 15 minutes on the phone, at a time you pick. Just answer the phone. If you know roughly how much is sitting in your corporation, that helps, but it's not needed.</p></div>
     </div>
   </section>
 
   <footer>
     <div>FinanceBridges &nbsp;&middot;&nbsp; <a href="mailto:info@financebridges.com">info@financebridges.com</a></div>
-    <div style="margin-top:10px">Income protection for Canadian business owners &#127809;</div>
+    <div style="margin-top:10px">Planning for Ontario business owners and their families &#127809;</div>
   </footer>
 </div>
 
@@ -393,7 +351,7 @@ src="https://www.facebook.com/tr?id=1100120314636630&ev=PageView&noscript=1"
   document.addEventListener('click', function(e){ var w=e.target.closest?e.target.closest('.js-vid'):null; if(w){ activate(w); } });
 
   /* main VSL */
-  (function(){ var m=document.getElementById('vsl-mount'); if(!m) return; var v=buildVid('r169', C.VSL_EMBED||"", C.VSL_POSTER||"", C.VSL_POSTER_TIME||4); m.appendChild(v); })();
+  (function(){ var m=document.getElementById('vsl-mount'); if(!m) return; if(!C.VSL_EMBED){ m.style.display='none'; return; } var v=buildVid('r169', C.VSL_EMBED||"", C.VSL_POSTER||"", C.VSL_POSTER_TIME||4); m.appendChild(v); })();
 
   /* advisor intro */
   (function(){
